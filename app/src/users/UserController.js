@@ -58,7 +58,7 @@
 
         $mdBottomSheet.show({
           controllerAs  : "vm",
-          templateUrl   : './src/users/view/contactSheet.html',
+          templateUrl   : './app/src/users/view/contactSheet.html',
           controller    : [ '$mdBottomSheet', ContactSheetController],
           parent        : angular.element(document.getElementById('content'))
         }).then(function(clickedItem) {
@@ -71,10 +71,10 @@
         function ContactSheetController( $mdBottomSheet ) {
           this.user = selectedUser;
           this.items = [
-            { name: 'Phone'       , icon: 'phone'       , icon_url: 'assets/svg/phone.svg'},
-            { name: 'Twitter'     , icon: 'twitter'     , icon_url: 'assets/svg/twitter.svg'},
-            { name: 'Google+'     , icon: 'google_plus' , icon_url: 'assets/svg/google_plus.svg'},
-            { name: 'Hangout'     , icon: 'hangouts'    , icon_url: 'assets/svg/hangouts.svg'}
+            { name: 'Phone'       , icon: 'phone'       , icon_url: './app/assets/svg/phone.svg'},
+            { name: 'Twitter'     , icon: 'twitter'     , icon_url: './app/assets/svg/twitter.svg'},
+            { name: 'Google+'     , icon: 'google_plus' , icon_url: './app/assets/svg/google_plus.svg'},
+            { name: 'Hangout'     , icon: 'hangouts'    , icon_url: './app/assets/svg/hangouts.svg'}
           ];
           this.contactUser = function(action) {
             // The actually contact process has not been implemented...
